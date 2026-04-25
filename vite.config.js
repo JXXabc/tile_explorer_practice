@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
+  base: './',          // 相对路径，GitHub Pages 子目录部署也能正确加载资源
   build: {
     target: 'es2015'   // 让 esbuild 把 ?. ?? 等新语法转为 ES2015 兼容代码
   },
