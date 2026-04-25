@@ -23,8 +23,6 @@ watch(() => store.soundEnabled, (on) => {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
-
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
 .app-container {
@@ -46,6 +44,6 @@ watch(() => store.soundEnabled, (on) => {
   --slot-bg: #2c3e50;
   --tile-size: 68px;
   --tile-radius: 12px;
-  --font: 'Nunito', sans-serif;
+  --font: -apple-system, 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
 }
 </style>
