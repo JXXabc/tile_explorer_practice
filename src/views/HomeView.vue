@@ -68,11 +68,13 @@ import { startBGM, setBGMEnabled } from '../utils/sound.js'
 
 const router = useRouter()
 const SPLASH_KEY = 'tile_splash_done'
-const showSplash = ref(!sessionStorage.getItem(SPLASH_KEY))
+let splashDone = false
+try { splashDone = !!sessionStorage.getItem(SPLASH_KEY) } catch (_) {}
+const showSplash = ref(!splashDone)
 
 function dismissSplash() {
   showSplash.value = false
-  sessionStorage.setItem(SPLASH_KEY, '1')
+  try { sessionStorage.setItem(SPLASH_KEY, '1') } catch (_) {}
   if (store.soundEnabled) startBGM()   // 首次手势 → 启动 BGM
 }
 
